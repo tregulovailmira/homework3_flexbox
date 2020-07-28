@@ -1,0 +1,24 @@
+:root {
+    --light-color: #fff;
+    --dark-color: #262626;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 70px;
+
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+.navigationMenu {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 400px;
+    width: 100%;
+}
