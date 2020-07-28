@@ -1,6 +1,12 @@
 :root {
     --light-color: #fff;
     --dark-color: #262626;
+    --main-font: 'Roboto Condensed', sans-serif;
+    --logo-font: bold italic 2rem 'Comic Neue', cursive;
+}
+
+html{
+    font-size: 16px;
 }
 
 nav {
@@ -21,4 +27,31 @@ nav {
 
     max-width: 400px;
     width: 100%;
+}
+
+.logo {
+    font: var(--logo-font);
+}
+
+.elementMenu {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+nav a {
+    font-family: var(--main-font);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+.contactButton a {
+    display: inline-block;
+
+    border: 2px solid var(--light-color);
+    border-radius: 5px;
+    padding: 15px 30px;
+
+    font-weight: bold;
+    font-size: 0.9rem;
 }
