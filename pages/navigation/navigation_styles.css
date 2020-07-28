@@ -9,6 +9,13 @@ html{
     font-size: 16px;
 }
 
+.headerArea {
+    background-image: url("navigation_images/background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 nav {
     display: flex;
     flex-direction: row;
