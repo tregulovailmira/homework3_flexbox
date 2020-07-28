@@ -12,6 +12,7 @@ html{
 .headerArea {
     background-image: url("navigation_images/background_image.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -36,7 +37,7 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -46,21 +47,30 @@ nav {
 }
 
 nav a {
+    display: inline-block;
     font-family: var(--main-font);
     text-decoration: none;
     text-transform: uppercase;
     color: var(--light-color);
 }
 
+.menuItem a {
+    padding: 20px;
+}
+
 .contactButton a {
-    display: inline-block;
+    padding: 15px 30px;
 
     border: 2px solid var(--light-color);
     border-radius: 5px;
-    padding: 15px 30px;
 
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+a:hover {
+    color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
 @media screen and (max-width: 1000px) {
@@ -77,35 +87,29 @@ nav a {
         padding: 10px 70px;
     }
 
-    nav > div {
+    .logo, .contactButton {
         margin: 10px 0;
     }
 
+    .menuItem a {
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-
         padding: 10px 60px;
     }
 }
 
 @media screen and (max-width: 650px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-
         padding: 10px 50px;
     }
 }
 
 @media screen and (max-width: 600px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-
         padding: 10px 40px;
     }
 }
