@@ -1,38 +1,68 @@
+:root {
+    --light-color: #fff;
+}
+
+html {
+    font-size: 14px;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    background-image: url("./images/backgroung_image.jpg");
+    font-family: 'Open Sans', sans-serif;
+    color: var(--light-color);
 }
 
-.formWrapper { /*задание размеров контейнера для формы*/
-    border: 1px solid black;  /*временная граница для формы*/
-    padding: 40px 30px;
+.formHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.formHeader p {
+    font-size: 1rem;
+}
+
+.formWrapper {
+    -webkit-box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
+    box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
+    padding: 40px 50px;
 }
 
 .formHeader {
     margin: 10px 0 40px 0;
 }
 
-.formRow { /*выравнивание флексами в каждой строке формы*/
+.formRow {
     display: flex;
     justify-content: flex-start;
 
     margin: 15px 0;
 }
 
-.formLabel {    /*ширина блоков-названий*/
+.formLabel {
     display: flex;
     align-items: center;
     min-width: 150px;
+    font-weight: bolder;
 }
 
-input, select {   /*высота инпутов*/
+input, select {
     box-sizing: border-box;
     height: 35px;
     padding-left: 15px;
+    border: none;
 }
-/*задаем соотношение размеров элементов формы*/
+
+.messageSubject {
+    background-color: var(--light-color);
+}
+
 .userNameInput {
     width: 50%;
 }
@@ -52,4 +82,23 @@ input, select {   /*высота инпутов*/
 
 #phonePt3 {
     width: 40%;
+}
+
+.inputSubmitWrapper {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-color);
+    justify-content: flex-end;
+}
+
+.submitButton {
+    background: none;
+    border: 2px solid var(--light-color);
+
+    color: var(--light-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    width: 80%;
 }
