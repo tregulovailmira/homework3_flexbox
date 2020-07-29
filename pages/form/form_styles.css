@@ -1,5 +1,8 @@
 :root {
     --light-color: #fff;
+    --desktop-shadow: 0 0 7px 7px rgba(0,0,0,0.5);
+    --mobile-shadow: 0 0 20px 9px rgba(0,0,0,0.68);
+    --label-width: 150px;
 }
 
 html {
@@ -10,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 
     background-image: url("./images/backgroung_image.jpg");
     background-position: center;
@@ -18,6 +21,24 @@ body {
     background-repeat: no-repeat;
     font-family: 'Open Sans', sans-serif;
     color: var(--light-color);
+}
+
+.flexRowSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formWrapper {
+    -webkit-box-shadow: var(--desktop-shadow);
+    -moz-box-shadow: var(--desktop-shadow);
+    box-shadow: var(--desktop-shadow);
+    padding: 40px 50px;
+    margin: 20px;
+}
+
+.formHeader {
+    margin: 10px 0 40px 0;
 }
 
 .formHeader h1 {
@@ -30,40 +51,23 @@ body {
     font-size: 1rem;
 }
 
-.formWrapper {
-    -webkit-box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
-    -moz-box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
-    box-shadow: 0 0 32px 16px rgba(0,0,0,0.68);
-    padding: 40px 50px;
-}
-
-.formHeader {
-    margin: 10px 0 40px 0;
-}
-
 .formRow {
     display: flex;
     justify-content: flex-start;
-
     margin: 15px 0;
 }
 
 .formLabel {
     display: flex;
     align-items: center;
-    min-width: 150px;
+    min-width: var(--label-width);
     font-weight: bolder;
 }
 
 input, select {
-    box-sizing: border-box;
     height: 35px;
     padding-left: 15px;
     border: none;
-}
-
-.messageSubject {
-    background-color: var(--light-color);
 }
 
 .userNameInput {
@@ -74,7 +78,7 @@ input, select {
     margin-left: 20px;
 }
 
-.emailInput, .messageSubject, .messageText{
+.emailInput, .messageSubjectSelect, .messageText{
     width: 100%;
 }
 
@@ -87,11 +91,20 @@ input, select {
     width: 40%;
 }
 
-.inputSubmitWrapper {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid var(--light-color);
-    justify-content: flex-end;
+.messageSubjectSelect {
+    background-color: var(--light-color);
+}
+
+.messageText {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+    border: none;
+}
+
+.formWrapper hr {
+    border-color: var(--light-color);
+    margin: 20px 0;
 }
 
 .submitButton {
@@ -103,5 +116,75 @@ input, select {
     font-weight: bold;
     font-size: 1.1rem;
 
-    width: 80%;
+    margin-left: 150px;
+    width: calc(100% - var(--label-width));
 }
+
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .formWrapper {
+        -webkit-box-shadow: var(--mobile-shadow);
+        -moz-box-shadow: var(--mobile-shadow);
+        box-shadow: var(--mobile-shadow);
+        padding: 40px 50px;
+        margin: 20px;
+    }
+
+    .formHeader {
+        margin: 10px 0 20px 0;
+    }
+
+    .formRow {
+        flex-direction: column;
+    }
+
+    .userNameInput {
+        width: 100%
+    }
+
+    .lastNameInput {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .formLabel {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #phone, #phonePt2 {
+        margin-right: 0;
+        width: 25%;
+    }
+
+    #phonePt3 {
+        width: 45%;
+    }
+
+    .submitButton {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .formWrapper {
+        padding: 30px 20px;
+    }
+
+    .formHeader {
+        margin: 5px 0 10px 0;
+    }
+
+    .formHeader h1 {
+        margin-bottom: 10px;
+    }
+
+    .formRow {
+        margin: 5px 0;
+    }  }

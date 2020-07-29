@@ -15,46 +15,47 @@
             <p>Please fill in your information and we'll be sending your order</p>
         </div>
         <form>
-            <div class="inputNameWrapper formRow">
+            <div class="formRow">
                 <div class="formLabel">Your name</div>
                 <label for="firstName"></label>
                 <input id="firstName" type="text" placeholder="first name" class="userNameInput firstNameInput">
                 <label for="lastName"></label>
                 <input id="lastName" type="text" placeholder="last name" class="userNameInput lastNameInput">
             </div>
-            <div class="inputEmailWrapper formRow">
+            <div class="formRow">
                 <div class="formLabel">Your email</div>
                 <label for="email"></label>
                 <input id="email" type="email" placeholder="your_mail@mail.com" class="emailInput">
             </div>
-            <div class="inputPhoneWrapper formRow">
+            <div class="formRow">
                 <div class="formLabel">Phone*</div>
                 <label for="phone"></label>
-                <input id="phone" type="tel" placeholder="000" class="phoneInput" maxlength="3">
                 <label for="phonePt2"></label>
-                <input id="phonePt2" type="tel" placeholder="000" class="phoneInput" maxlength="3">
                 <label for="phonePt3"></label>
-                <input id="phonePt3" type="tel" placeholder="0000" class="phoneInput" maxlength="4">
+                <div class="flexRowSpaceBetween">
+                    <input id="phone" type="tel" placeholder="000" class="phoneInput" maxlength="3">
+                    <input id="phonePt2" type="tel" placeholder="000" class="phoneInput" maxlength="3">
+                    <input id="phonePt3" type="tel" placeholder="0000" class="phoneInput" maxlength="4">
+                </div>
             </div>
-            <div class="selectSubjectWrapper formRow">
+            <div class="formRow">
                 <div class="formLabel">Message subject*</div>
                 <label for="messageSubject"></label>
-                <select id="messageSubject" class="messageSubject">
+                <select id="messageSubject" class="messageSubjectSelect">
                     <option value="subject1">Subject1</option>
                     <option value="subject2">Subject2</option>
                     <option value="subject3">Subject3</option>
                     <option value="other" selected>Other</option>
                 </select>
             </div>
-            <div class="textMessageWrapper formRow">
-                <div class="formLabel">Message</div>
+            <div class="formRow">
+                <div class="formLabel">Message*</div>
                 <label for="messageText"></label>
                 <textarea id="messageText" class="messageText" cols="80" rows="7"></textarea>
             </div>
-            <div class="inputSubmitWrapper formRow">
+            <hr/>
                 <label for="submitButton"></label>
                 <input type="submit" id="submitButton" class="submitButton" value="submit form">
-            </div>
         </form>
     </div>
 </body>
