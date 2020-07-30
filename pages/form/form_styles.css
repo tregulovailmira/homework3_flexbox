@@ -1,0 +1,190 @@
+:root {
+    --light-color: #fff;
+    --desktop-shadow: 0 0 7px 7px rgba(0,0,0,0.5);
+    --mobile-shadow: 0 0 20px 9px rgba(0,0,0,0.68);
+    --label-width: 150px;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-image: url("./images/backgroung_image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--light-color);
+}
+
+.flexRowSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formWrapper {
+    -webkit-box-shadow: var(--desktop-shadow);
+    -moz-box-shadow: var(--desktop-shadow);
+    box-shadow: var(--desktop-shadow);
+    padding: 40px 50px;
+    margin: 20px;
+}
+
+.formHeader {
+    margin: 10px 0 40px 0;
+}
+
+.formHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.formHeader p {
+    font-size: 1rem;
+}
+
+.formRow {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+.formLabel {
+    display: flex;
+    align-items: center;
+    min-width: var(--label-width);
+    font-weight: bolder;
+}
+
+input, select {
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+}
+
+.userNameInput {
+    width: 50%;
+}
+
+.lastNameInput {
+    margin-left: 20px;
+}
+
+.emailInput, .messageSubjectSelect, .messageText{
+    width: 100%;
+}
+
+#phone, #phonePt2 {
+    width: 30%;
+    margin-right: 20px;
+}
+
+#phonePt3 {
+    width: 40%;
+}
+
+.messageSubjectSelect {
+    background-color: var(--light-color);
+}
+
+.messageText {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+    border: none;
+}
+
+.formWrapper hr {
+    border-color: var(--light-color);
+    margin: 20px 0;
+}
+
+.submitButton {
+    background: none;
+    border: 2px solid var(--light-color);
+
+    color: var(--light-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    margin-left: 150px;
+    width: calc(100% - var(--label-width));
+}
+
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .formWrapper {
+        -webkit-box-shadow: var(--mobile-shadow);
+        -moz-box-shadow: var(--mobile-shadow);
+        box-shadow: var(--mobile-shadow);
+        padding: 40px 50px;
+        margin: 20px;
+    }
+
+    .formHeader {
+        margin: 10px 0 20px 0;
+    }
+
+    .formRow {
+        flex-direction: column;
+    }
+
+    .userNameInput {
+        width: 100%
+    }
+
+    .lastNameInput {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .formLabel {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #phone, #phonePt2 {
+        margin-right: 0;
+        width: 25%;
+    }
+
+    #phonePt3 {
+        width: 45%;
+    }
+
+    .submitButton {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .formWrapper {
+        padding: 30px 20px;
+    }
+
+    .formHeader {
+        margin: 5px 0 10px 0;
+    }
+
+    .formHeader h1 {
+        margin-bottom: 10px;
+    }
+
+    .formRow {
+        margin: 5px 0;
+    }  }
