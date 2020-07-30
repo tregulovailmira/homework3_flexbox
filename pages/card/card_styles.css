@@ -1,0 +1,116 @@
+:root {
+    --container-background: lightgrey;
+    --main-color: #ffffff;
+}
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--container-background);
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-color);
+}
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 300px;
+    border-radius: 3px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.cardContent {
+    margin-right: 70px;
+}
+
+.salesCard {
+    background: linear-gradient(0.25turn, #d9a490, #f17e61);
+}
+
+.ordersCard {
+    background: linear-gradient(0.25turn, #88b6d5, #1096f8);
+}
+
+.visitorsCard {
+    background: linear-gradient(0.25turn, #7cd4b3, #13eea3);
+}
+
+.cardTitle {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.cardValue {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cardTitle, .cardDescription {
+    font-weight: 600;
+}
+
+.cardDescription {
+    font-size: 0.7rem;
+}
+
+svg {
+    fill: var(--main-color);
+}
+
+.backgroundCircle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--main-color);
+    opacity: 0.3;
+}
+
+.backgroundBottomCircle {
+    right: -20px;
+    bottom: -70px;
+}
+
+.backgroundTopCircle {
+    right: -70px;
+    top: -15px;
+}
+
+@media screen and (max-width: 950px) {
+    .cardWrapper {
+        max-width: 1200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        max-width: 270px;
+    }
+}
