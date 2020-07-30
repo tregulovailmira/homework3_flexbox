@@ -1,0 +1,125 @@
+:root {
+    --light-color: #fff;
+    --dark-color: #262626;
+    --main-font: 'Roboto Condensed', sans-serif;
+    --logo-font: bold italic 2rem 'Comic Neue', cursive;
+}
+
+html{
+    font-size: 16px;
+}
+
+.headerArea {
+    background-image: url("navigation_images/background_image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 70px;
+
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+.logo {
+    font: var(--logo-font);
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 500px;
+    width: 100%;
+}
+
+.menuItem {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+nav a {
+    display: inline-block;
+    font-family: var(--main-font);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+.menuItem a {
+    padding: 20px;
+}
+
+.contactButton a {
+    padding: 15px 30px;
+
+    border: 2px solid var(--light-color);
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        padding: 30px 40px;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 10px 70px;
+    }
+
+    .logo, .contactButton {
+        margin: 10px 0;
+    }
+
+    .menuItem a {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        padding: 10px 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 10px 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html{
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 10px 20px;
+    }
+}
