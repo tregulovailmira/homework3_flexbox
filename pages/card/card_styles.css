@@ -95,3 +95,22 @@ svg {
     right: -70px;
     top: -15px;
 }
+
+@media screen and (max-width: 950px) {
+    .cardWrapper {
+        max-width: 1200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        max-width: 270px;
+    }
+}
